@@ -1,7 +1,8 @@
+
 /*
 #WebMaster : Felipe Campos
-#Version : 1.2
-#Reparo : Gustavo De Souza Lima 
+#Version : 1.4
+#Reparo Vs 1.1: Gustavo De Souza Lima 
 */
 jQuery.fn.floatfixed = function(settings){
   var nav = $(this),
@@ -13,14 +14,18 @@ jQuery.fn.floatfixed = function(settings){
         'scrollTopSpeed':400,
         'scrollOffsetTopx':200,
         'floatFixedx':true,
-        'scrollClass':''
+        'scrollClass': ''
     };
-     if (settings){$.extend(config, settings);}
+if (settings){$.extend(config, settings);}
+
 
     if(config.scrollTopx){
-        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="'+config.scrollClass +'"></i></a>');
+        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class=" ' +config.scrollClass+' "></i></a>');
         var backTop = $("#back-top");
         backTop.hide();
+        if($(config.scrollClass).val()!=''){
+			$('#back-top i').css({"content":""})
+		}
         $(window).scroll(function () {
 			if ($(this).scrollTop() > config.scrollOffsetTopx) {
 				backTop.fadeIn();
@@ -39,7 +44,7 @@ jQuery.fn.floatfixed = function(settings){
 
 
 
-   
+    
     return this.each(function(){
 
 

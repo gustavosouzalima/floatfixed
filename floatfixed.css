@@ -1,9 +1,3 @@
-/* 
-#WebMaster : Felipe Campos 
-#Version : 1.0
-#modifcation Vs 1.1 : Gustavo De Souza Lima 
-*/
-
 #back-top {
   background-color: #222236;
   background-color: rgba(0, 0, 0, 0.3);
@@ -39,17 +33,11 @@
   color: #fff;
   text-decoration: none;
 }
-
-.icon-chevron-up:before {
-content: "^";
-
+#back-top i{
+  content: '^';
 }
 
-.fixed-nav{
-  /* write manipulation  */
-}
-/*
 i.scroll.icon-chevron-up {
   margin-top: 10px;
  
-}*/
+}

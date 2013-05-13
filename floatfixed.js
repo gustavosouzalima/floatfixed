@@ -17,7 +17,7 @@ jQuery.fn.floatfixed = function(settings){
     };
 
     if(config.scrollTopx){
-        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="icon-chevron-up icon-white'+config.scrollClass +'"></i></a>');
+        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="'+config.scrollClass +'"></i></a>');
         var backTop = $("#back-top");
         backTop.hide();
         $(window).scroll(function () {

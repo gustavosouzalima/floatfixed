@@ -1,7 +1,6 @@
-
 /*
 #WebMaster : Felipe Campos
-#Version : 1.1
+#Version : 1.2
 #Reparo : Gustavo De Souza Lima 
 */
 jQuery.fn.floatfixed = function(settings){
@@ -13,11 +12,12 @@ jQuery.fn.floatfixed = function(settings){
         'scrollTopx':true,
         'scrollTopSpeed':400,
         'scrollOffsetTopx':200,
-        'floatFixedx':true
+        'floatFixedx':true,
+        'scrollClass':''
     };
 
     if(config.scrollTopx){
-        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="icon-chevron-up"></i></a>');
+        $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="icon-chevron-up icon-white'+config.scrollClass +'"></i></a>');
         var backTop = $("#back-top");
         backTop.hide();
         $(window).scroll(function () {

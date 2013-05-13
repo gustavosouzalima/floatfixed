@@ -1,7 +1,7 @@
 /*
 #WebMaster : Felipe Campos
 #Version : 1.2
-#Reparo : Gustavo De Souza Lima 
+#Reparo : Gustavo De Souza Lima - @dodilei
 */
 jQuery.fn.floatfixed = function(settings){
   var nav = $(this),
@@ -16,29 +16,28 @@ jQuery.fn.floatfixed = function(settings){
         'scrollClass':''
     };
 
+    if (settings){$.extend(config, settings);}
+
     if(config.scrollTopx){
         $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="'+config.scrollClass +'"></i></a>');
         var backTop = $("#back-top");
         backTop.hide();
         $(window).scroll(function () {
-			if ($(this).scrollTop() > config.scrollOffsetTopx) {
-				backTop.fadeIn();
-			} else {
-				backTop.fadeOut();
-			}
-		});
+            if ($(this).scrollTop() > config.scrollOffsetTopx) {
+                backTop.fadeIn();
+            } else {
+                backTop.fadeOut();
+            }
+        });
         backTop.click(function () {
 
-			$('body,html').animate({
-				scrollTop: 0
-			}, config.scrollTopSpeed);
-			return false;
-		});
+            $('body,html').animate({
+                scrollTop: 0
+            }, config.scrollTopSpeed);
+            return false;
+        });
     }
 
-
-
-    if (settings){$.extend(config, settings);}
     return this.each(function(){
 
 

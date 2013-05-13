@@ -15,6 +15,7 @@ jQuery.fn.floatfixed = function(settings){
         'floatFixedx':true,
         'scrollClass':''
     };
+     if (settings){$.extend(config, settings);}
 
     if(config.scrollTopx){
         $('body').append('<a href="#" id="back-top"  style="display: inline;"><i class="'+config.scrollClass +'"></i></a>');
@@ -38,7 +39,7 @@ jQuery.fn.floatfixed = function(settings){
 
 
 
-    if (settings){$.extend(config, settings);}
+   
     return this.each(function(){
 
 

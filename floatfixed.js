@@ -1,7 +1,7 @@
 /*
 #WebMaster : Felipe Campos
-#Version : 1.2
-#Reparo : Gustavo De Souza Lima - @dodilei
+#Version : 1.4
+#Reparo: Gustavo De Souza Lima
 */
 jQuery.fn.floatfixed = function (settings) {
     var nav = $(this),
@@ -79,7 +79,6 @@ jQuery.fn.floatfixed = function (settings) {
                         "left": left,
                         "z-index": index
                     }).removeClass("fixed-nav");
-
                 }
             }
         });
